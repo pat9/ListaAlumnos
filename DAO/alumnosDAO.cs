@@ -9,18 +9,18 @@ using BO;
 
 namespace DAO
 {
-    class alumnosDAO
+   public class alumnosDAO
     {
         conexionDAO conectar = new conexionDAO();
         public int agregar(object agregar)
         {
-            alumnoBO obejto = (alumnoBO)agregar;
-            SqlCommand dir = new SqlCommand("INSERT INTO alumnos (nombres ,apellidos,grado ,grupo)VALUES (@nom,@apelido,@gra,@gru)");
+           alumnoBO  obejto = (alumnoBO)agregar;
+            SqlCommand dir = new SqlCommand("INSERT INTO alumnos VALUES(@nom,@a,@gra,@gru)");
            
-            dir.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombres;//----
-            dir.Parameters.Add("@apelido", SqlDbType.VarChar).Value = obejto.Apellidos;
+            dir.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombres;
+            dir.Parameters.Add("@a", SqlDbType.VarChar).Value = obejto.Apellidos;
             dir.Parameters.Add("@gra", SqlDbType.VarChar).Value = obejto.Grado;
-            dir.Parameters.Add("@gru", SqlDbType.VarChar).Value = obejto.Grado;
+            dir.Parameters.Add("@gru", SqlDbType.VarChar).Value = obejto.Grupo;
             dir.CommandType = CommandType.Text;
         return    conectar.EjecutarComando(dir);
 

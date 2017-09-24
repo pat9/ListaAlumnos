@@ -26,13 +26,18 @@
             </div>
         </div>
         <div class="row">
-            <asp:Button CssClass="waves-effect waves-light btn" runat="server" ID="btnAgregar" Text="Agregar" />
-            <asp:Button CssClass="waves-effect waves-light btn" runat="server" ID="btnModificar" Text="Modificar" />
-            <asp:Button CssClass="waves-effect waves-light btn" runat="server" ID="btnEliminar" Text="Eliminar" />
+            <asp:Button CssClass="waves-effect waves-light btn" runat="server" ID="btnAgregar" Text="Agregar" OnClick="btnAgregar_Click" />
+            <asp:Button CssClass="waves-effect waves-light btn" runat="server" ID="btnModificar" Text="Modificar" OnClick="btnModificar_Click" />
+            <asp:Button CssClass="waves-effect waves-light btn" runat="server" ID="btnEliminar" Text="Eliminar" OnClick="btnEliminar_Click" />
             
         </div>
         <div class="row">
-            <asp:GridView runat="server" ID="gvAlumnos">
+            <asp:GridView runat="server" ID="gvAlumnos" EnableModelValidation="True" OnRowCommand="gvAlumnos_RowCommand">
+                <Columns>
+                    <asp:ButtonField CommandName="btn_sele" Text="Seleccionar">
+                    <ControlStyle CssClass="btn btn-primary" />
+                    </asp:ButtonField>
+                </Columns>
             </asp:GridView>
         </div>
     </div>
