@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="alumnosDAO.cs" />
     <Compile Include="conexionDAO.cs" />
+    <Compile Include="ListaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

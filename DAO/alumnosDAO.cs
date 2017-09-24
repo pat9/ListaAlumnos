@@ -29,7 +29,7 @@ namespace DAO
         public int eliminar(object eliminar)
         {
             alumnoBO obje = (alumnoBO)eliminar;
-            SqlCommand coma = new SqlCommand("delete from alumno where id=@id");
+            SqlCommand coma = new SqlCommand("delete from alumnos where id=@id");
             coma.Parameters.Add("id", SqlDbType.Int).Value = obje.Id;
             coma.CommandType = CommandType.Text;
             return conectar.EjecutarComando(coma);
@@ -37,7 +37,7 @@ namespace DAO
         public int actualizar(object actualizar)
         {
             alumnoBO obejto = (alumnoBO)actualizar;
-            SqlCommand dir = new SqlCommand("update lista set nombres=@nom,apellidos=@apelido,grado=@gra,grupo=@gru where id=@id");
+            SqlCommand dir = new SqlCommand("update alumnos set nombres=@nom,apellidos=@apelido,grado=@gra,grupo=@gru where id=@id");
             dir.Parameters.Add("@nom", SqlDbType.VarChar).Value = obejto.Nombres;//----
             dir.Parameters.Add("@apelido", SqlDbType.VarChar).Value = obejto.Apellidos;
             dir.Parameters.Add("@gra", SqlDbType.VarChar).Value = obejto.Grado;
@@ -47,7 +47,7 @@ namespace DAO
         }
         public DataSet mostrarlista()
         {
-            SqlCommand comando = new SqlCommand("select * from lista");
+            SqlCommand comando = new SqlCommand("select * from alumnos");
             comando.CommandType = CommandType.Text;
        return     conectar.EjecutarSentencia(comando);
         }
