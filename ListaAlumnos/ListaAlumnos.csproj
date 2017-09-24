@@ -63,6 +63,7 @@
     <Content Include="css\materialize.min.css" />
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />
+    <Content Include="Lista.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +73,13 @@
     </Compile>
     <Compile Include="Alumnos.aspx.designer.cs">
       <DependentUpon>Alumnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lista.aspx.cs">
+      <DependentUpon>Lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lista.aspx.designer.cs">
+      <DependentUpon>Lista.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginaMaestra.Master.cs">
       <DependentUpon>PaginaMaestra.Master</DependentUpon>
