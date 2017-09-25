@@ -30,6 +30,8 @@
             <asp:Button CssClass="waves-effect waves-light btn" runat="server" ID="btnModificar" Text="Modificar" OnClick="btnModificar_Click" />
             <asp:Button CssClass="waves-effect waves-light btn" runat="server" ID="btnEliminar" Text="Eliminar" OnClick="btnEliminar_Click" />
             
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            
         </div>
         <div class="row">
             <asp:GridView runat="server" ID="gvAlumnos" EnableModelValidation="True" OnRowCommand="gvAlumnos_RowCommand">

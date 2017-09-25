@@ -15,10 +15,10 @@
 <body>
     <nav>
         <div class="nav-wrapper darken-4">
-            <a href="#" class="brand-logo right">Lista de asistencia </a>
+            <a href="" class="brand-logo right">Lista de asistencia </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a>Alumnos</a></li>
-                <li><a>Pase de lista</a></li>
+                <li><a href="Lista.aspx">Pase de lista</a></li>
             </ul>
         </div>
     </nav>

@@ -52,5 +52,11 @@ namespace DAO
             comando.CommandType = CommandType.Text;
        return     conectar.EjecutarSentencia(comando);
         }
+        public DataSet mostrarlista1()
+        {
+            SqlCommand comando = new SqlCommand("select id ,  nombres+' '+ apellidos as nom  from alumnos");
+            comando.CommandType = CommandType.Text;
+            return conectar.EjecutarSentencia(comando);
+        }
     }
 }

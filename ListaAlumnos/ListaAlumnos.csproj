@@ -42,6 +42,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,6 +62,7 @@
     <Content Include="Alumnos.aspx" />
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
+    <Content Include="frm_reporte.aspx" />
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />
     <Content Include="Lista.aspx" />
@@ -73,6 +75,13 @@
     </Compile>
     <Compile Include="Alumnos.aspx.designer.cs">
       <DependentUpon>Alumnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_reporte.aspx.cs">
+      <DependentUpon>frm_reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_reporte.aspx.designer.cs">
+      <DependentUpon>frm_reporte.aspx</DependentUpon>
     </Compile>
     <Compile Include="Lista.aspx.cs">
       <DependentUpon>Lista.aspx</DependentUpon>
@@ -121,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rpt_alumnos.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
