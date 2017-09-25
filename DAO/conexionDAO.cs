@@ -29,7 +29,7 @@ namespace DAO
         public SqlConnection establecerConexion()
         {
             //mi conexion "Data Source=DESKTOP-TT12AGM\\SQLEXPRESS; Initial catalog=lista;  integrated security=true";
-            string cs = "Data Source=DESKTOP-TT12AGM\\SQLEXPRESS; Initial catalog=lista;  integrated security=true";
+            string cs = "Data Source=DANIEL-PC; Initial catalog=lista;  integrated security=true";
             coneccion = new SqlConnection(cs);
             return coneccion;
         }
